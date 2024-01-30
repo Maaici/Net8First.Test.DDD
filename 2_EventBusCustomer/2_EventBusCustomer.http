@@ -1,0 +1,6 @@
+@_2_EventBusCustomer_HostAddress = http://localhost:5213
+
+GET {{_2_EventBusCustomer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
