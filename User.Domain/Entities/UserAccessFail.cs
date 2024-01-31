@@ -4,15 +4,19 @@
     {
         public Guid Id { get; init; }
 
-        public User User { get; init; }
+        public UserModel User { get; init; }
 
-        public Guid UserGuid { get; init; }
+        public Guid UserId { get; init; }
 
         private bool isLockOut;
+
         public DateTime? LockEnd { get; private set; }
+
         public int AccessCount { get; private set; }
-        public UserAccessFail() { }
-        public UserAccessFail(User user)
+
+        private UserAccessFail() { }
+
+        public UserAccessFail(UserModel user)
         {
             this.User = user;
             this.Id = Guid.NewGuid();

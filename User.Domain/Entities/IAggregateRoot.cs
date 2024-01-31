@@ -2,5 +2,6 @@
 {
     public interface IAggregateRoot
     {
+        //标识聚合根
     }
 }

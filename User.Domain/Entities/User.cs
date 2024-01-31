@@ -1,9 +1,10 @@
-﻿using User.Domain.ValueObjects;
+﻿using User.Domain.Entities;
+using User.Domain.ValueObjects;
 using Zack.Commons;
 
-namespace User.Domain.Entities
+namespace User.Domain
 {
-    public record User : IAggregateRoot
+    public record UserModel : IAggregateRoot
     {
         public Guid Id { get; init; }
 
@@ -13,8 +14,8 @@ namespace User.Domain.Entities
 
         public UserAccessFail UserAccessFail { get; private set; }
 
-        private User() { }
-        private User(PhoneNumber phoneNumber)
+        private UserModel() { }
+        private UserModel(PhoneNumber phoneNumber)
         {
             PhoneNumber = phoneNumber;
             Id = Guid.NewGuid();
